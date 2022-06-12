@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/29776287/173233919-bb23ecc6-3147-4135-
 
 The script can not only create a split screen composition but can also add timers, slow-down the video speed, and more.
 
-```python
+```bash
 usage: create_split_screen_video.py [-h] -dir DIR [-out OUT] [-nosubs] [-smf SMF] [-fd FD] [-timers] [-noaudio]
 
 Create a split screen video composition by stitching videos in a directory
