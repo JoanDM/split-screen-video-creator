@@ -2,11 +2,27 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Python 3.9.5=0](https://img.shields.io/badge/python-3.9.5-blue.svg)](https://www.python.org/downloads/release/python-395/)
 
-This tool will create a split screen video composition by stitching videos in a directory, as shown in the demo below:
+This tool will create a split screen video composition by stitching videos side by side, as shown in the demo below:
 
 https://user-images.githubusercontent.com/29776287/173233919-bb23ecc6-3147-4135-8d2f-155a1b834c00.mov
 
-The script can not only create a split screen composition but also add timers and slow-down the video speed, among others.
+The script can not only create a split screen composition but can also add timers, slow-down the video speed, and more.
+
+```python
+usage: create_split_screen_video.py [-h] -dir DIR [-out OUT] [-nosubs] [-smf SMF] [-fd FD] [-timers] [-noaudio]
+
+Create a split screen video composition by stitching videos in a directory
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -dir DIR    Directory containing videos
+  -out OUT    Output directory to store video composition. Defaults to same folder containing input video
+  -nosubs     Flag to deactivate default video subtitle insertion
+  -smf SMF    Slow-motion factor. E.g. x2 will slowdown frame rate by two. N.B. Audio cannot be preserved if smf>2
+  -fd FD      Last frame freezing duration in seconds
+  -timers     insert timers
+  -noaudio    remove audio from final composition
+```
 
 # QuickStart: One-time setup
 
