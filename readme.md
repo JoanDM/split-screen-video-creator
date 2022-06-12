@@ -31,7 +31,7 @@ Make sure you have installed `ffmpeg` ([How to get FFMPEG with Homebrew](https:/
 You can use `which ffmpeg` and `which ffprobe` to locate their path in your system.
 
 Then run:
-```bash
+```
 cd split-screen-video-creator
 python3 -mvenv venv
 source venv/bin/activate
