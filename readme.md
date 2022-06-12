@@ -2,9 +2,11 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Python 3.9.5=0](https://img.shields.io/badge/python-3.9.5-blue.svg)](https://www.python.org/downloads/release/python-395/)
 
-Set of tools used for handy image processing workflows such as:
+This tool will create a split screen video composition by stitching videos in a directory, as shown in the demo below:
 
-WIP
+https://user-images.githubusercontent.com/29776287/173233919-bb23ecc6-3147-4135-8d2f-155a1b834c00.mov
+
+The script can not only create a split screen composition but also add timers and slow-down the video speed, among others.
 
 # QuickStart: One-time setup
 
