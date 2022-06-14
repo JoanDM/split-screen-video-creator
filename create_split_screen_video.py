@@ -140,9 +140,8 @@ def create_split_screen_video(
     # to identify every single input video
     if insert_subtitles:
         text_box_opacity = 1.0
-        text_height_percentage = DEFAULT_SUBTITLE_HEIGHT_PERCENTAGE
         ffmpeg_complex_filter += (
-            f"[composition];[composition]drawbox=x=0:y=ih-h:w=iw:h=ih*{text_height_percentage}"
+            f"[composition];[composition]drawbox=x=0:y=ih-h:w=iw:h=ih*{DEFAULT_SUBTITLE_HEIGHT_PERCENTAGE}"
             f":color=black@{text_box_opacity}:t=fill"
         )
         normalized_font_size = 1000
@@ -155,7 +154,7 @@ def create_split_screen_video(
             font = ImageFont.truetype(str(DEFAULT_FONT_PATH), ref_font_size)
             ref_w, ref_h = font.getsize(subtitle_text)
             limit_text_width = video_widths[i]
-            limit_text_height = text_height_percentage * final_video_h
+            limit_text_height = DEFAULT_SUBTITLE_HEIGHT_PERCENTAGE * final_video_h
             fitting_font_size = int(
                 min(
                     ref_font_size * (limit_text_width / ref_w),
