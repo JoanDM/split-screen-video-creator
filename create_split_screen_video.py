@@ -182,7 +182,7 @@ def create_split_screen_video(
         for i in range(len(paths_to_videos) - 1):
             ffmpeg_complex_filter += f";[composition][timer{i}]overlay={video_width_tracker}:{0}[composition]"
             video_width_tracker += video_widths[i] + padding_width
-        ffmpeg_complex_filter += f";[composition][timer{len(paths_to_videos)}]overlay={video_width_tracker}:{0}"
+        ffmpeg_complex_filter += f";[composition][timer{len(paths_to_videos) - 1}]overlay={video_width_tracker}:{0}"
 
     # Slow down the final composition by x factor
     ffmpeg_complex_filter += (
